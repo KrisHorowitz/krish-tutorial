@@ -1,7 +1,7 @@
 /*global describe,it */
 var assert      = require('assert')
   , factorial   = require('../part1/factorial')
-  , sumOfDigits = require('../part2/sumOfDigits') 
+  , sumOfDigits = require('../part2/sumOfDigits')
   , min         = require('../part3/min')
 ;
 
@@ -27,6 +27,7 @@ describe('part3', function() {
     it('find min value in array', function() {
         assert.throws(function() { min(234); }, Error, '234 should equal 9');
         assert.equal(min([-12, 1, 5, -15]), -15, 'should be -15');
+        assert.equal(min([-15, 1, 5, -12]), -15, 'should be -15');
         assert.equal(min([12]), 12, 'should be 12');
         assert.equal(min([]), null, 'should be null');
         assert.equal(min(['asdf', 12, 234, 10, null]), null, 'should be 10');
